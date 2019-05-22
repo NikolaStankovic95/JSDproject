@@ -1,0 +1,72 @@
+/*
+  HL7 message DSL grammar.
+*/
+
+HL7Message:
+    start=StartOfTrans msh=MSHSegment pid=PIDSegment pv1=PV1Segment test1=TestDefSegment (nteSegments*=NTESegment)? (tests*=TestDefSegment['[CR]'])? end=EndOfTrans '\n'
+;
+
+MSHSegment:
+    'MSH|^~\&' sep=FieldSep fields+=Field['|'] cr=CarRet
+;
+
+PIDSegment:
+    'PID' fields+=Field['|'] cr=CarRet
+;
+
+PV1Segment:
+    'PV1' fields+=Field['|'] cr=CarRet
+;
+
+NTESegment:
+    'NTE' fields+=Field['|'] cr=CarRet
+;
+
+TestDefSegment:
+    orc=ORCSegment cr=CarRet obr=OBRSegment
+;
+
+ORCSegment:
+    'ORC' fields+=Field['|'] cr=CarRet
+;
+
+OBRSegment:
+    'OBR' fields+=Field['|'] cr=CarRet
+;
+
+Field:
+    subfields+=Subfield['^'] | content=Subfield
+;
+
+Subfield:
+    INT | FLOAT | ID | '' | Text
+;
+
+Text:
+    name = /[^|]*/
+;
+
+FieldSep:
+    '|'
+;
+
+SegSep:
+    '^'
+;
+
+StartOfTrans:
+    '[0B]'
+;
+
+EndOfTrans:
+    '[1C]'
+;
+
+CarRet:
+    '[CR]'
+;
+
+// Special rule for comments. Comments start with //
+Comment:
+    /\/\/.*$/
+;

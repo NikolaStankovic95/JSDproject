@@ -1,0 +1,89 @@
+
+    digraph xtext {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+2204103605976 -> 2204103644680[arrowtail=diamond, dir=both, headlabel="msh "]
+2204103605976 -> 2204103625800[arrowtail=diamond, dir=both, headlabel="pid "]
+2204103605976 -> 2204103613528[arrowtail=diamond, dir=both, headlabel="pv1 "]
+2204103605976 -> 2204103628632[arrowtail=diamond, dir=both, headlabel="test1 "]
+2204103605976 -> 2204103635240[arrowtail=diamond, dir=both, headlabel="nteSegments 0..*"]
+2204103605976 -> 2204103628632[arrowtail=diamond, dir=both, headlabel="tests 0..*"]
+2204103605976[ label="{HL7Message|+start:StartOfTrans\l+end:EndOfTrans\l}"]
+
+2204103644680 -> 2204103638072[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+2204103644680[ label="{MSHSegment|+sep:FieldSep\l+cr:CarRet\l}"]
+
+2204103625800 -> 2204103638072[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+2204103625800[ label="{PIDSegment|+cr:CarRet\l}"]
+
+2204103613528 -> 2204103638072[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+2204103613528[ label="{PV1Segment|+cr:CarRet\l}"]
+
+2204103635240 -> 2204103638072[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+2204103635240[ label="{NTESegment|+cr:CarRet\l}"]
+
+2204103628632 -> 2204103642792[arrowtail=diamond, dir=both, headlabel="orc "]
+2204103628632 -> 2204103614472[arrowtail=diamond, dir=both, headlabel="obr "]
+2204103628632[ label="{TestDefSegment|+cr:CarRet\l}"]
+
+2204103642792 -> 2204103638072[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+2204103642792[ label="{ORCSegment|+cr:CarRet\l}"]
+
+2204103614472 -> 2204103638072[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+2204103614472[ label="{OBRSegment|+cr:CarRet\l}"]
+
+2204103638072 -> 2204103639960[arrowtail=diamond, dir=both, headlabel="subfields 1..*"]
+2204103638072 -> 2204103639960[arrowtail=diamond, dir=both, headlabel="content "]
+2204103638072[ label="{Field|}"]
+
+2204103639960[ label="{*Subfield|}"]
+2204103639960 -> 2204103649400 [dir=back]
+
+2204103649400[ label="{Text|+name:STRING\l}"]
+
+2204103647512[ label="{FieldSep|\|}"]
+
+2204103995800[ label="{SegSep|^}"]
+
+2204103982584[ label="{StartOfTrans|[0B]}"]
+
+2204103974088[ label="{EndOfTrans|[1C]}"]
+
+2204104002408[ label="{CarRet|[CR]}"]
+
+2204104003352[ label="{Comment|\\/\\/.*$}"]
+
+2204103587096[ label="{ID|}"]
+
+2204103603144[ label="{STRING|}"]
+
+2204103604088[ label="{BOOL|}"]
+
+2204103588040[ label="{INT|}"]
+
+2204103621080[ label="{FLOAT|}"]
+
+2204103622968[ label="{NUMBER|}"]
+2204103622968 -> 2204103621080 [dir=back]
+2204103622968 -> 2204103588040 [dir=back]
+
+2204103624856[ label="{BASETYPE|}"]
+2204103624856 -> 2204103622968 [dir=back]
+2204103624856 -> 2204103604088 [dir=back]
+2204103624856 -> 2204103587096 [dir=back]
+2204103624856 -> 2204103603144 [dir=back]
+
+2204103643736[ label="{*OBJECT|}"]
+2204103643736 -> 2204103624856 [dir=back]
+
+
+}
