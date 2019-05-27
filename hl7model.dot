@@ -1,5 +1,5 @@
 
-    digraph xtext {
+    digraph textX {
     fontname = "Bitstream Vera Sans"
     fontsize = 8
     node[
@@ -11,79 +11,84 @@
     edge[dir=black,arrowtail=empty]
 
 
-2204103605976 -> 2204103644680[arrowtail=diamond, dir=both, headlabel="msh "]
-2204103605976 -> 2204103625800[arrowtail=diamond, dir=both, headlabel="pid "]
-2204103605976 -> 2204103613528[arrowtail=diamond, dir=both, headlabel="pv1 "]
-2204103605976 -> 2204103628632[arrowtail=diamond, dir=both, headlabel="test1 "]
-2204103605976 -> 2204103635240[arrowtail=diamond, dir=both, headlabel="nteSegments 0..*"]
-2204103605976 -> 2204103628632[arrowtail=diamond, dir=both, headlabel="tests 0..*"]
-2204103605976[ label="{HL7Message|+start:StartOfTrans\l+end:EndOfTrans\l}"]
+49091552[ label="{PV1Segment|+cr:CarRet\l}"]
 
-2204103644680 -> 2204103638072[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
-2204103644680[ label="{MSHSegment|+sep:FieldSep\l+cr:CarRet\l}"]
+49336368[ label="{StartOfTrans|[0B]}"]
 
-2204103625800 -> 2204103638072[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
-2204103625800[ label="{PIDSegment|+cr:CarRet\l}"]
+49310056[ label="{Comment|\\/\\/.*$}"]
 
-2204103613528 -> 2204103638072[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
-2204103613528[ label="{PV1Segment|+cr:CarRet\l}"]
+49092968[ label="{NTESegment|+cr:CarRet\l}"]
 
-2204103635240 -> 2204103638072[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
-2204103635240[ label="{NTESegment|+cr:CarRet\l}"]
+49064768[ label="{MSHSegment|+sep:FieldSep\l+cr:CarRet\l}"]
 
-2204103628632 -> 2204103642792[arrowtail=diamond, dir=both, headlabel="orc "]
-2204103628632 -> 2204103614472[arrowtail=diamond, dir=both, headlabel="obr "]
-2204103628632[ label="{TestDefSegment|+cr:CarRet\l}"]
+49331480[ label="{EndOfTrans|[1C]}"]
 
-2204103642792 -> 2204103638072[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
-2204103642792[ label="{ORCSegment|+cr:CarRet\l}"]
+49323288[ label="{Text|+name:STRING\l}"]
 
-2204103614472 -> 2204103638072[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
-2204103614472[ label="{OBRSegment|+cr:CarRet\l}"]
+49321872[ label="{*Subfield|}"]
 
-2204103638072 -> 2204103639960[arrowtail=diamond, dir=both, headlabel="subfields 1..*"]
-2204103638072 -> 2204103639960[arrowtail=diamond, dir=both, headlabel="content "]
-2204103638072[ label="{Field|}"]
+49063352[ label="{PIDSegment|+cr:CarRet\l}"]
 
-2204103639960[ label="{*Subfield|}"]
-2204103639960 -> 2204103649400 [dir=back]
+49310528[ label="{OBRSegment|+cr:CarRet\l}"]
 
-2204103649400[ label="{Text|+name:STRING\l}"]
+49329120[ label="{FieldSep|\|}"]
 
-2204103647512[ label="{FieldSep|\|}"]
+49069336[ label="{HL7Message|+start:StartOfTrans\l+end:EndOfTrans\l+cr:CarRet\l}"]
 
-2204103995800[ label="{SegSep|^}"]
+49330536[ label="{SegSep|^}"]
 
-2204103982584[ label="{StartOfTrans|[0B]}"]
+49307696[ label="{TestDefSegment|}"]
 
-2204103974088[ label="{EndOfTrans|[1C]}"]
+49309112[ label="{ORCSegment|+cr:CarRet\l}"]
 
-2204104002408[ label="{CarRet|[CR]}"]
+49322816[ label="{CarRet|[0D]}"]
 
-2204104003352[ label="{Comment|\\/\\/.*$}"]
+49320456[ label="{Field|}"]
 
-2204103587096[ label="{ID|}"]
+49068392[ label="{FLOAT|}"]
 
-2204103603144[ label="{STRING|}"]
+49091080[ label="{*OBJECT|}"]
 
-2204103604088[ label="{BOOL|}"]
+49062408[ label="{ID|}"]
 
-2204103588040[ label="{INT|}"]
+49063824[ label="{STRING|}"]
 
-2204103621080[ label="{FLOAT|}"]
+49065240[ label="{BOOL|}"]
 
-2204103622968[ label="{NUMBER|}"]
-2204103622968 -> 2204103621080 [dir=back]
-2204103622968 -> 2204103588040 [dir=back]
+49072960[ label="{BASETYPE|}"]
 
-2204103624856[ label="{BASETYPE|}"]
-2204103624856 -> 2204103622968 [dir=back]
-2204103624856 -> 2204103604088 [dir=back]
-2204103624856 -> 2204103587096 [dir=back]
-2204103624856 -> 2204103603144 [dir=back]
+49066976[ label="{INT|}"]
 
-2204103643736[ label="{*OBJECT|}"]
-2204103643736 -> 2204103624856 [dir=back]
+49070128[ label="{STRICTFLOAT|}"]
 
+49071544[ label="{NUMBER|}"]
+
+
+
+49091552 -> 49320456[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+49092968 -> 49320456[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+49064768 -> 49320456[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+49321872 -> 49323288 [dir=back]
+49063352 -> 49320456[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+49310528 -> 49320456[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+49069336 -> 49064768[arrowtail=diamond, dir=both, headlabel="msh "]
+49069336 -> 49063352[arrowtail=diamond, dir=both, headlabel="pid "]
+49069336 -> 49091552[arrowtail=diamond, dir=both, headlabel="pv1 "]
+49069336 -> 49307696[arrowtail=diamond, dir=both, headlabel="test1 "]
+49069336 -> 49092968[arrowtail=diamond, dir=both, headlabel="nteSegments 0..*"]
+49069336 -> 49307696[arrowtail=diamond, dir=both, headlabel="tests 0..*"]
+49307696 -> 49309112[arrowtail=diamond, dir=both, headlabel="orc "]
+49307696 -> 49310528[arrowtail=diamond, dir=both, headlabel="obr "]
+49309112 -> 49320456[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+49320456 -> 49321872[arrowtail=diamond, dir=both, headlabel="subfields 1..*"]
+49320456 -> 49321872[arrowtail=diamond, dir=both, headlabel="content "]
+49091080 -> 49072960 [dir=back]
+49072960 -> 49071544 [dir=back]
+49072960 -> 49068392 [dir=back]
+49072960 -> 49065240 [dir=back]
+49072960 -> 49062408 [dir=back]
+49072960 -> 49063824 [dir=back]
+49071544 -> 49070128 [dir=back]
+49071544 -> 49066976 [dir=back]
 
 }
