@@ -1,1 +1,15 @@
-[0B]MSH|^~\&|COMTRADE|Opšta Bolnica Čačak||SLIS^SLIS|20190516141540||ORM^O01|||2.3.1|||||||||[0D]PID|95363|95363|2607956500418|95363|TOPALOVIĆ^RADOSAV||19560726000000|M|||||28000709643|||||20057158766||2607956500418|||||||||||[0D]PV1||I|||1598/2019||^Danijela^Gostiljac|^Danijela^Gostiljac||||||I.1.1.A.2.|||^Danijela^Gostiljac||15272||||||||||||||||||||||||||||||||||[0D]ORC|NW|50001387617|||||||20190516141540||||||||||||||||[0D]OBR||50001387617||SEZatvorena|||20190516141540|||||||||||||||||||||||||||||||||||||||[0D]NTE|0|Notes|SEZatvorena 2019-05-16 (otvorena 2019-05-16)||[0D]NTE|1|BasisOfInsurance|1814||[0D]NTE|2|Branch|17||[0D]NTE|3|Office|||[0D]NTE|4|Particip|531||[0D]NTE|5|Reason|Z017  Laboratorijski pregledi||[0D]NTE|6|Laboratory|S||[0D]NTE|7|InsuranceExtraTypeID|RFZO||[0D][1C][0D]
+[0B]
+MSH|^~\&|COMTRADE|Opšta Bolnica Čačak||SLIS^SLIS|20190516141540||ORM^O01|||2.3.1|||||||||
+PID|95363|95363|2607956500418|95363|TOPALOVIĆ^RADOSAV||19560726000000|M|||||28000709643|||||20057158766||2607956500418|||||||||||
+PV1||I|||1598/2019||^Danijela^Gostiljac|^Danijela^Gostiljac||||||I.1.1.A.2.|||^Danijela^Gostiljac||15272||||||||||||||||||||||||||||||||||
+ORC|NW|50001387617|||||||20190516141540||||||||||||||||
+OBR||50001387617||SEZatvorena|||20190516141540|||||||||||||||||||||||||||||||||||||||
+NTE|0|Notes|SEZatvorena 2019-05-16 (otvorena 2019-05-16)||
+NTE|1|BasisOfInsurance|1814||
+NTE|2|Branch|17||
+NTE|3|Office|||
+NTE|4|Particip|531||
+NTE|5|Reason|Z017  Laboratorijski pregledi||
+NTE|6|Laboratory|S||
+NTE|7|InsuranceExtraTypeID|RFZO||
+[1C]

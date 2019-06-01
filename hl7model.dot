@@ -11,84 +11,77 @@
     edge[dir=black,arrowtail=empty]
 
 
-49091552[ label="{PV1Segment|+cr:CarRet\l}"]
+2059701428664[ label="{HL7Message|}"]
 
-49336368[ label="{StartOfTrans|[0B]}"]
+2059701420168[ label="{MSHSegment|}"]
 
-49310056[ label="{Comment|\\/\\/.*$}"]
+2059701411672[ label="{PIDSegment|}"]
 
-49092968[ label="{NTESegment|+cr:CarRet\l}"]
+2059701422056[ label="{PV1Segment|}"]
 
-49064768[ label="{MSHSegment|+sep:FieldSep\l+cr:CarRet\l}"]
+2059701425832[ label="{NTESegment|}"]
 
-49331480[ label="{EndOfTrans|[1C]}"]
+2059701811688[ label="{TestDefSegment|}"]
 
-49323288[ label="{Text|+name:STRING\l}"]
+2059701827736[ label="{ORCSegment|}"]
 
-49321872[ label="{*Subfield|}"]
+2059701831512[ label="{OBRSegment|}"]
 
-49063352[ label="{PIDSegment|+cr:CarRet\l}"]
+2059701830568[ label="{Segment|}"]
 
-49310528[ label="{OBRSegment|+cr:CarRet\l}"]
+2059701820184[ label="{Field|}"]
 
-49329120[ label="{FieldSep|\|}"]
+2059701828680[ label="{Subfield|+value:STRING\l}"]
 
-49069336[ label="{HL7Message|+start:StartOfTrans\l+end:EndOfTrans\l+cr:CarRet\l}"]
+2059701834344[ label="{FieldSep|\|}"]
 
-49330536[ label="{SegSep|^}"]
+2059701825848[ label="{StartOfTrans|[0B]}"]
 
-49307696[ label="{TestDefSegment|}"]
+2059701835288[ label="{EndOfTrans|[1C]}"]
 
-49309112[ label="{ORCSegment|+cr:CarRet\l}"]
+2059701809800[ label="{CR|\\s*}"]
 
-49322816[ label="{CarRet|[0D]}"]
+2059701812632[ label="{Comment|\\/\\/.*$}"]
 
-49320456[ label="{Field|}"]
+2059701403176[ label="{ID|}"]
 
-49068392[ label="{FLOAT|}"]
+2059701405064[ label="{STRING|}"]
 
-49091080[ label="{*OBJECT|}"]
+2059701406008[ label="{BOOL|}"]
 
-49062408[ label="{ID|}"]
+2059701408840[ label="{INT|}"]
 
-49063824[ label="{STRING|}"]
+2059701412616[ label="{FLOAT|}"]
 
-49065240[ label="{BOOL|}"]
+2059701413560[ label="{STRICTFLOAT|}"]
 
-49072960[ label="{BASETYPE|}"]
+2059701419224[ label="{NUMBER|}"]
 
-49066976[ label="{INT|}"]
+2059701423000[ label="{BASETYPE|}"]
 
-49070128[ label="{STRICTFLOAT|}"]
-
-49071544[ label="{NUMBER|}"]
+2059701426776[ label="{*OBJECT|}"]
 
 
 
-49091552 -> 49320456[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
-49092968 -> 49320456[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
-49064768 -> 49320456[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
-49321872 -> 49323288 [dir=back]
-49063352 -> 49320456[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
-49310528 -> 49320456[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
-49069336 -> 49064768[arrowtail=diamond, dir=both, headlabel="msh "]
-49069336 -> 49063352[arrowtail=diamond, dir=both, headlabel="pid "]
-49069336 -> 49091552[arrowtail=diamond, dir=both, headlabel="pv1 "]
-49069336 -> 49307696[arrowtail=diamond, dir=both, headlabel="test1 "]
-49069336 -> 49092968[arrowtail=diamond, dir=both, headlabel="nteSegments 0..*"]
-49069336 -> 49307696[arrowtail=diamond, dir=both, headlabel="tests 0..*"]
-49307696 -> 49309112[arrowtail=diamond, dir=both, headlabel="orc "]
-49307696 -> 49310528[arrowtail=diamond, dir=both, headlabel="obr "]
-49309112 -> 49320456[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
-49320456 -> 49321872[arrowtail=diamond, dir=both, headlabel="subfields 1..*"]
-49320456 -> 49321872[arrowtail=diamond, dir=both, headlabel="content "]
-49091080 -> 49072960 [dir=back]
-49072960 -> 49071544 [dir=back]
-49072960 -> 49068392 [dir=back]
-49072960 -> 49065240 [dir=back]
-49072960 -> 49062408 [dir=back]
-49072960 -> 49063824 [dir=back]
-49071544 -> 49070128 [dir=back]
-49071544 -> 49066976 [dir=back]
+2059701428664 -> 2059701420168[arrowtail=diamond, dir=both, headlabel="msh "]
+2059701428664 -> 2059701830568[arrowtail=diamond, dir=both, headlabel="segments 1..*"]
+2059701420168 -> 2059701820184[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+2059701411672 -> 2059701820184[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+2059701422056 -> 2059701820184[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+2059701425832 -> 2059701820184[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+2059701811688 -> 2059701827736[arrowtail=diamond, dir=both, headlabel="orc "]
+2059701811688 -> 2059701831512[arrowtail=diamond, dir=both, headlabel="obr "]
+2059701827736 -> 2059701820184[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+2059701831512 -> 2059701820184[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+2059701830568 -> 2059701820184[arrowtail=diamond, dir=both, headlabel="value 1..*"]
+2059701820184 -> 2059701828680[arrowtail=diamond, dir=both, headlabel="values 1..*"]
+2059701419224 -> 2059701413560 [dir=back]
+2059701419224 -> 2059701408840 [dir=back]
+2059701423000 -> 2059701419224 [dir=back]
+2059701423000 -> 2059701412616 [dir=back]
+2059701423000 -> 2059701406008 [dir=back]
+2059701423000 -> 2059701403176 [dir=back]
+2059701423000 -> 2059701405064 [dir=back]
+2059701426776 -> 2059701423000 [dir=back]
 
 }
