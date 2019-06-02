@@ -5,47 +5,48 @@
 HL7Message:
     StartOfTrans CR
     msh=MSHSegment CR
-    segments+=Segment['\n']
+    pid=PIDSegment CR
+    pv1=PV1Segment CR
+    test1=TestDefSegment
+    (nteSegments+=NTESegment)?
+    (tests+=TestDefSegment)?
+    EndOfTrans CR
 ;
 
 MSHSegment:
-    'MSH|^~\&|' fields+=Field['|']
+    'MSH|^~\&|' fields+=Field['|'eolterm]
 ;
 
 PIDSegment:
-    'PID' fields+=Field['|']
+    'PID' fields+=Field['|'eolterm]
 ;
 
 PV1Segment:
-    'PV1' fields+=Field['|']
-;
-
-NTESegment:
-    'NTE' fields+=Field['|']
+    'PV1' fields+=Field['|'eolterm]
 ;
 
 TestDefSegment:
-    orc=ORCSegment CR obr=OBRSegment
+    orc=ORCSegment obr=OBRSegment
 ;
 
 ORCSegment:
-    'ORC' fields+=Field['|']
+    'ORC' fields+=Field['|'eolterm] CR
 ;
 
 OBRSegment:
-    'OBR' fields+=Field['|']
+    'OBR' fields+=Field['|'eolterm] CR
 ;
 
-Segment:
-    value+=Field['|']
+NTESegment:
+    'NTE' fields+=Field['|'eolterm] CR
 ;
 
 Field:
-    values+=Subfield['^'] | '' | '|'
+    values+=Subfield['^'] | value = /[^|\n]*/ | ''
 ;
 
 Subfield:
-    value = /[^^|]*/ | '' | '^'
+    value = /[^^|\n]*/ | ''
 ;
 
 FieldSep:
@@ -62,9 +63,4 @@ EndOfTrans:
 
 CR:
     /\s*/
-;
-
-// Special rule for comments. Comments start with //
-Comment:
-    /\/\/.*$/
 ;
