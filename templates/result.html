@@ -1,0 +1,35 @@
+<htlm>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Nalog za pacijenta broj: {{model.pid.fields[1].values[0].value}}</h1>
+        <br>
+        <h2>Ustanova: {{model.msh.fields[1].values[0].value}}, verzija protokola: {{model.msh.fields[9].values[0].value}})</h2>
+        <h2>Primnjena poruka od sistema: {{model.msh.fields[0].values[0].value}}</h2>
+        <h2>Tip poruke: {{model.msh.fields[6].values[0].value}} : {{model.msh.fields[6].values[1].value}}</h2>
+        <h2>Prima sistem: {{model.msh.fields[3].values[1].value}}</h2>
+        <h2>PID pacijenta:{{model.pid.fields[1].values[0].value}}</h2>
+        <h2>Ime i prezime pacijenta: {{model.pid.fields[4].values[0].value}} {{model.pid.fields[4].values[1].value}}</h2>
+        <h2>Pol: {{model.pid.fields[7].values[0].value}}</h2>
+        <h2>Adresa:{{model.pid.fields[10].values[0].value}}</h2>
+        <h2>LBO:{{model.pid.fields[12].values[0].value}}</h2>
+        <h2>BZK:{{model.pid.fields[17].values[0].value}}</h2>
+        <h2>JMBG:{{model.pid.fields[2].values[0].value}}</h2>
+        <h2>Ime i prezime lekara: {{model.pv1.fields[6].values[1].value}} {{model.pv1.fields[6].values[2].value}}</h2>
+        <br>
+        <h2>Analize:</h2>
+        <ul>
+            <li>{{model.test1.obr.fields[3].values[0].value}}</li>
+            {% for test in model.tests %}
+                <li>{{test.obr.fields[3].values[0].value}}</li>
+            {% endfor %}
+        </ul>
+        <h2>Napomene:</h2>
+        <ul>
+            {% for note in model.nteSegments %}
+                <li>{{note.fields[1].values[0].value}} : {{note.fields[2].values[0].value}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</htlm>

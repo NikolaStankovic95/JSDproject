@@ -18,11 +18,11 @@ MSHSegment:
 ;
 
 PIDSegment:
-    'PID' fields+=Field['|'eolterm]
+    'PID|' fields+=Field['|'eolterm]
 ;
 
 PV1Segment:
-    'PV1' fields+=Field['|'eolterm]
+    'PV1|' fields+=Field['|'eolterm]
 ;
 
 TestDefSegment:
@@ -30,19 +30,19 @@ TestDefSegment:
 ;
 
 ORCSegment:
-    'ORC' fields+=Field['|'eolterm] CR
+    'ORC|' fields+=Field['|'eolterm] CR
 ;
 
 OBRSegment:
-    'OBR' fields+=Field['|'eolterm] CR
+    'OBR|' fields+=Field['|'eolterm] CR
 ;
 
 NTESegment:
-    'NTE' fields+=Field['|'eolterm] CR
+    'NTE|' fields+=Field['|'eolterm] CR
 ;
 
 Field:
-    values+=Subfield['^'] | value = /[^|\n]*/ | ''
+    values+=Subfield['^'] | /[^|\n]*/ | ''
 ;
 
 Subfield:
