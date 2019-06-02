@@ -67,14 +67,14 @@ def print_model(model):
         print(note[0] + ' : ' + note[1], end='\n')
 
 
-def generate_pdf(model, this_folder):
+def generate_pdf(model, this_folder, file):
     jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(this_folder), trim_blocks=True, lstrip_blocks=True)
 
     template = jinja_env.get_template(join(this_folder, '/templates/result.html'))
     pdf_folder = join(this_folder, 'pdf')
     utils_folder = join(this_folder, 'utils')
     config = pdfkit.configuration(wkhtmltopdf=join(utils_folder, 'wkhtmltopdf.exe'))
-    pdfkit.from_string(template.render(model=model), join(pdf_folder, "%s.pdf" % get_element(model.pid, 1)), configuration=config)
+    pdfkit.from_string(template.render(model=model), join(pdf_folder, file), configuration=config)
 
 
 def main(debug=False):
@@ -84,24 +84,29 @@ def main(debug=False):
     # Get meta-model from language description
     meta_model = metamodel_from_file(join(this_folder, 'grammar.tx'), debug=debug, skipws=False, ws='\s')
 
-    try:
-        model = meta_model.model_from_file(join(this_folder, 'example.txt'))
-    except textx.exceptions.TextXSyntaxError as e:
-        print('Greška u pravilu u gramatici:', e.message, end='\n', file=sys.stderr)
-        return -1
-
     dot_folder = join(this_folder, 'dotexport')
     if not os.path.exists(dot_folder):
         os.mkdir(dot_folder)
     metamodel_export(meta_model, join(dot_folder, 'hl7meta_model.dot'))
-    model_export(model, join(dot_folder, 'hl7model.dot'))
 
-    if not check_patient_id(model):
-        print('PID se ne slaže u svim testovima sa PID-om iz zaglavlja')
-        return -1
-    else:
-        print_model(model)
-        generate_pdf(model, this_folder)
+    source = join(this_folder, 'sourcefiles')
+
+    for file in os.listdir(source):
+        if file.endswith(".txt"):
+            try:
+                model = meta_model.model_from_file(join(source, file))
+            except textx.exceptions.TextXSyntaxError as e:
+                print('Greška u fajlu:', file, '; opis greške', e.message, end='\n', file=sys.stderr)
+                continue
+
+            model_export(model, join(dot_folder, file.replace('.txt', '.dot')))
+
+            if not check_patient_id(model):
+                print('PID se ne slaže u svim testovima sa PID-om iz zaglavlja')
+                continue
+            else:
+                print_model(model)
+                generate_pdf(model, this_folder, file.replace('.txt', '.pdf'))
 
 
 if __name__ == '__main__':

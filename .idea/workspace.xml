@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05360808-7f41-4a4e-b6ba-e7dbaa235449" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dotexport/hl7meta_model.dot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotexport/hl7model.dot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pdf/95363.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dotexport/example.dot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dotexport/example1.dot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/hl7meta_model.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pdf/example1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sourcefiles/example1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotexport/hl7meta_model.dot" beforeDir="false" afterPath="$PROJECT_DIR$/dotexport/hl7meta_model.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotexport/hl7model.dot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sourcefiles/example.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hl7test.py" beforeDir="false" afterPath="$PROJECT_DIR$/hl7test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/95363.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/pdf/example.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,14 +70,16 @@
         <option value="$PROJECT_DIR$/grammar.tx" />
         <option value="$PROJECT_DIR$/dotexport/hl7model.dot" />
         <option value="$PROJECT_DIR$/templates/result.html" />
-        <option value="$PROJECT_DIR$/hl7test.py" />
         <option value="$PROJECT_DIR$/example.txt" />
+        <option value="$PROJECT_DIR$/hl7test.py" />
+        <option value="$PROJECT_DIR$/sourcefiles/example.txt" />
+        <option value="$PROJECT_DIR$/README.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="580" />
-    <option name="y" value="200" />
+    <option name="x" value="555" />
+    <option name="y" value="-25" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -86,6 +96,16 @@
               <item name="JSDproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="JSDproject" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JSDproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JSDproject" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JSDproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JSDproject" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -94,12 +114,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\borivoj.bogdanovic\PycharmProjects\JSDproject\sourcefiles" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\borivoj.bogdanovic\PycharmProjects\JSDproject\images" />
+      <recent name="C:\Users\borivoj.bogdanovic\PycharmProjects\JSDproject\sourcefiles" />
       <recent name="C:\Users\borivoj.bogdanovic\PycharmProjects\JSDproject\utils" />
     </key>
   </component>
@@ -175,18 +200,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559507794587</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Završena gramatika.&#10;Generiše se poruka na konzoli i pdf fajl sa PID-om iz poruke kao imenom.&#10;Ako poruka nije dobra, ispisuje se exception sa delom stringa koji nije mogao biti match-ovan.">
+      <created>1559508423035</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559508423035</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13513513" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13553259" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969603" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960256" weight="0.3289166" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960256" visible="true" weight="0.3289166" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3998441" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -195,6 +227,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32969603" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50039744" side_tool="true" weight="0.3289166" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32969603" />
+      <window_info anchor="right" id="GfmBrowser" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.25" />
@@ -255,34 +288,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hl7meta_model.dot">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotexport/hl7meta_model.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dotexport/hl7model.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="931" selection-start-line="931" selection-end-line="931" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pdf/95363.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hl7meta_model.dot" />
+    <entry file="file://$PROJECT_DIR$/dotexport/hl7model.dot" />
+    <entry file="file://$PROJECT_DIR$/pdf/95363.html" />
     <entry file="file://$PROJECT_DIR$/templates/result.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sourcefiles/example1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hl7test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="105" column="24" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/hl7meta_model.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dotexport/hl7meta_model.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sourcefiles/example.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -293,20 +335,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example.txt">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hl7test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="89" column="72" selection-start-line="89" selection-start-column="68" selection-end-line="89" selection-end-column="72" />
-          <folding>
-            <element signature="e#22#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
         </state>
       </provider>
     </entry>
