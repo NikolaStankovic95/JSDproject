@@ -1,0 +1,86 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+3011644021352[ label="{HL7Message|}"]
+
+3011644008136[ label="{MSHSegment|}"]
+
+3011644057224[ label="{PIDSegment|}"]
+
+3011644045896[ label="{PV1Segment|}"]
+
+3011644049672[ label="{TestDefSegment|}"]
+
+3011644051560[ label="{ORCSegment|}"]
+
+3011644055336[ label="{OBRSegment|}"]
+
+3011644929112[ label="{NTESegment|}"]
+
+3011644947048[ label="{Field|}"]
+
+3011644927224[ label="{Subfield|+value:STRING\l}"]
+
+3011644931944[ label="{FieldSep|\|}"]
+
+3011644926280[ label="{StartOfTrans|[0B]}"]
+
+3011644928168[ label="{EndOfTrans|[1C]}"]
+
+3011644934776[ label="{CR|\\s*}"]
+
+3011644020408[ label="{ID|}"]
+
+3011644033624[ label="{STRING|}"]
+
+3011644022296[ label="{BOOL|}"]
+
+3011644004360[ label="{INT|}"]
+
+3011644037400[ label="{FLOAT|}"]
+
+3011644039288[ label="{STRICTFLOAT|}"]
+
+3011644041176[ label="{NUMBER|}"]
+
+3011644043064[ label="{BASETYPE|}"]
+
+3011644053448[ label="{*OBJECT|}"]
+
+
+
+3011644021352 -> 3011644008136[arrowtail=diamond, dir=both, headlabel="msh "]
+3011644021352 -> 3011644057224[arrowtail=diamond, dir=both, headlabel="pid "]
+3011644021352 -> 3011644045896[arrowtail=diamond, dir=both, headlabel="pv1 "]
+3011644021352 -> 3011644049672[arrowtail=diamond, dir=both, headlabel="test1 "]
+3011644021352 -> 3011644929112[arrowtail=diamond, dir=both, headlabel="nteSegments 1..*"]
+3011644021352 -> 3011644049672[arrowtail=diamond, dir=both, headlabel="tests 1..*"]
+3011644008136 -> 3011644947048[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+3011644057224 -> 3011644947048[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+3011644045896 -> 3011644947048[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+3011644049672 -> 3011644051560[arrowtail=diamond, dir=both, headlabel="orc "]
+3011644049672 -> 3011644055336[arrowtail=diamond, dir=both, headlabel="obr "]
+3011644051560 -> 3011644947048[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+3011644055336 -> 3011644947048[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+3011644929112 -> 3011644947048[arrowtail=diamond, dir=both, headlabel="fields 1..*"]
+3011644947048 -> 3011644927224[arrowtail=diamond, dir=both, headlabel="values 1..*"]
+3011644041176 -> 3011644039288 [dir=back]
+3011644041176 -> 3011644004360 [dir=back]
+3011644043064 -> 3011644041176 [dir=back]
+3011644043064 -> 3011644037400 [dir=back]
+3011644043064 -> 3011644022296 [dir=back]
+3011644043064 -> 3011644020408 [dir=back]
+3011644043064 -> 3011644033624 [dir=back]
+3011644053448 -> 3011644043064 [dir=back]
+
+}
